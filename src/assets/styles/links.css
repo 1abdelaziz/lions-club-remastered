@@ -1,6 +1,6 @@
 .link {
     text-decoration: none;
-    color: var(--bs-dark);
+    color: var(--bs-primary);
     transition: all 0.3s ease;
 }
 

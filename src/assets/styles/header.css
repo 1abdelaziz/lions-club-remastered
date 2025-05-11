@@ -5,7 +5,7 @@ header .brand-name .inner {
 
 header.scrolled .link, 
 header.scrolled .brand-name .inner {
-    color: var(--bs-dark) !important;
+    color: var(--bs-dark);
 }
 
 header.scrolled {

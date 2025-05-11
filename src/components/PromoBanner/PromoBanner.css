@@ -1,0 +1,14 @@
+.promobanner {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    outline: solid 2px var(--bs-primary);
+    border-radius: 10px;
+    background: hsl(215, 76%, 35%, 5%);
+}
+
+.promobanner p {
+    max-width: 600px;
+}

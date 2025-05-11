@@ -10,6 +10,7 @@ import FeatureSection from "../components/FeatureSection/FeatureSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import CardContainer from "../components/CardContainer/CardContainer.jsx";
 import EventCard from "../components/EventCard/EventCard.jsx";
+import PromoBanner from "../components/PromoBanner/PromoBanner.jsx";
 
 export default function Home() {
     const featuredEvents = [
@@ -108,6 +109,21 @@ export default function Home() {
                     ]}
                 />
 
+                <FeatureSection
+                    title="Des membres engagés, des histoires inspirantes"
+                    paragraph="Derrière chaque action se cachent des visages passionnés. Nos membres partagent leurs expériences uniques, leurs motivations et la joie de servir les autres. Découvrez leurs parcours inspirants."
+                    img={{
+                        src: "https://placehold.co/600x900?text=Portraits+de+membres",
+                        alt: "Portraits de membres Lions",
+                        right: true, // image à droite
+                    }}
+                    ctaLinks={[
+                        <Link to="/temoignages" className="link" key="1">
+                            Nos membres <FaArrowRight />
+                        </Link>,
+                    ]}
+                />
+
                 <section className="featured-events my-5">
                     <h2 className='text-center'>Événements en vedette</h2>
 
@@ -117,6 +133,15 @@ export default function Home() {
                         )}
                     </CardContainer>
                 </section>
+
+                <PromoBanner
+                    title="Rejoignez le Lions Club"
+                    paragraph="Faites partie d'une communauté engagée, développez vos compétences en leadership, et contribuez à des projets qui font la différence dans notre société."
+                    ctaButtons={[
+                        <Link to="/inscription" className="btn btn-warning me-2" key="join">S'inscrire</Link>,
+                        <Link to="/a-propos" className="btn btn-outline-primary" key="learn">En savoir plus</Link>
+                    ]}
+                />
             </main>
 
             <Footer
