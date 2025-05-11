@@ -1,0 +1,37 @@
+.event-card-container {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: none;
+}
+
+.event-card-container .card-img-top {
+    object-fit: cover;
+    width: 100%;
+}
+
+.event-card-container .card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.event-card-container h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.event-card-container h3 {
+    color: var(--bs-primary);
+    font-weight: bold;
+}
+
+.event-card-container .card-text {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}

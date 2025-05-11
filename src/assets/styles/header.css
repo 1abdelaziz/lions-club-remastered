@@ -1,0 +1,26 @@
+header .link, 
+header .brand-name .inner {
+    color: white;
+}
+
+header.scrolled .link, 
+header.scrolled .brand-name .inner {
+    color: var(--bs-dark) !important;
+}
+
+header.scrolled {
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 80px;
+}
+
+.brand-name {
+    color: var(--bs-warning);
+}
+
+.brand-name .inner {
+    color: var(--bs-dark);
+}

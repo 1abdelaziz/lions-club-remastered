@@ -1,0 +1,9 @@
+.link {
+    text-decoration: none;
+    color: var(--bs-dark);
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    color: var(--bs-warning) !important;
+}

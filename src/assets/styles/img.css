@@ -1,0 +1,12 @@
+img:not(.logo) {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+img:hover {
+    transform: scale(1.01);
+}
+
+img:not(.logo):hover {
+    box-shadow: 0 8px 8px hsla(0, 0%, 0%, 0.3);
+}

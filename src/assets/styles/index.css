@@ -1,0 +1,27 @@
+/* Generals */
+* {
+    font-family: Helvetica, sans-serif, system-ui;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdfdfd;
+}
+
+:root {
+    --bs-primary: hsl(215, 76%, 35%);
+    --bs-warning: hsl(49, 99%, 50%);
+    --bs-secondary: hsl(49, 99%, 50%);
+    --bs-dark: hsla(0, 0%, 0%, 0.8);
+}
+
+.text-dark {
+    color: var(--bs-dark) !important;
+}
+
+h2 {
+    font-weight: 800;
+    color: var(--bs-primary);
+}
