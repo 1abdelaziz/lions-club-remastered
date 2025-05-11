@@ -75,14 +75,14 @@
         padding: 100px 20px;
     }
     
-    .cta-buttons-container {
+    .main-hero .cta-buttons-container {
         flex-direction: column;
         width: 100%;
         max-width: 300px;
     }
     
-    .cta-buttons-container a,
-    .cta-buttons-container button {
+    .main-hero .cta-buttons-container a,
+    .main-hero .cta-buttons-container button {
         width: 100%;
     }
 }

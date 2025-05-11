@@ -1,0 +1,105 @@
+/* Container for timeline items */
+.timeline-items-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Central line */
+.timeline-items-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--bs-primary);
+    transform: translateX(-50%);
+}
+
+/* Timeline item styles */
+.timeline-item {
+    position: relative;
+    width: 46%;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* Even children (right side) */
+.timeline-item:nth-child(even) {
+    margin-left: 54%;
+}
+
+/* Odd children (left side) */
+.timeline-item:nth-child(odd) {
+    margin-right: 54%;
+    text-align: right;
+}
+
+/* Title color */
+.timeline-item h4 {
+    color: var(--bs-primary);
+    font-weight: bold;
+}
+
+/* Date style */
+.timeline-item time {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Optional: Add dots on the central line */
+@media (min-width: 769px) {
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        width: 12px;
+        height: 12px;
+        background: var(--bs-primary);
+        border-radius: 50%;
+    }
+
+    .timeline-item:nth-child(even)::after {
+        left: -8px;
+    }
+
+    .timeline-item:nth-child(odd)::after {
+        right: -8px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hide central line */
+    .timeline-items-container::before {
+        display: none;
+    }
+    
+    /* Make all items full width and left-aligned */
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+        border-left: 2px solid var(--bs-primary);
+        border-right: none;
+        padding-left: 20px;
+    }
+    
+    /* Position dots on the left */
+    .timeline-item::after {
+        left: -6px !important; /* Override both left and right positioning */
+        right: auto !important;
+    }
+    
+    /* Remove any specific odd/even styles */
+    .timeline-item:nth-child(odd)::after,
+    .timeline-item:nth-child(even)::after {
+        left: -6px;
+        right: auto;
+    }
+}

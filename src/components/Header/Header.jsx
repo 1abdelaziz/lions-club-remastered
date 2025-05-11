@@ -78,7 +78,7 @@ export default function Header(props) {
                         {links.length > 0 && 
                             <ul className="navbar-nav px-2">
                                 {links.map((link, index) =>
-                                    <li key={index} className='navbar-item my-auto mx-2'>{link}</li>
+                                    <li key={index} className='navbar-item my-auto mx-2 py-2'>{link}</li>
                                 )}
                             </ul>
                         }      

@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * A CardContainer component that acts as a layout wrapper.
+ * A CardsContainer component that acts as a layout wrapper.
  * It renders its children within a responsive container
  * that adjusts its width based on the screen size.
  *
@@ -10,7 +10,7 @@ import React from 'react';
  * @returns {ReactElement} - The rendered CardContainer component.
  */
 
-export default function CardContainer(props) {
+export default function CardsContainer(props) {
     const cards = React.Children.toArray(props.children)
 
     return (

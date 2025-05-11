@@ -6,6 +6,7 @@
 
 .feature-section img {
   aspect-ratio: 1 / 1;
+  max-height: 90%;
   object-fit: cover;
   border-radius: 10px;
 }

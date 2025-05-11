@@ -1,5 +1,4 @@
-import { FaArrowRight, FaFacebook, 
-         FaInstagram, FaTwitter, FaLinkedin,} from 'react-icons/fa';
+import { FaArrowRight, FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import heroBackground from "../assets/images/logo.png";
@@ -8,7 +7,7 @@ import Header from "../components/Header/Header.jsx";
 import MainHero from "../components/MainHero/MainHero.jsx";
 import FeatureSection from "../components/FeatureSection/FeatureSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
-import CardContainer from "../components/CardContainer/CardContainer.jsx";
+import CardsContainer from "../components/CardsContainer/CardsContainer.jsx";
 import EventCard from "../components/EventCard/EventCard.jsx";
 import PromoBanner from "../components/PromoBanner/PromoBanner.jsx";
 
@@ -54,8 +53,6 @@ export default function Home() {
             link: '/evenements/reboisement'
         }
     ];
-      
-      
 
     return (
         <>
@@ -127,11 +124,11 @@ export default function Home() {
                 <section className="featured-events my-5">
                     <h2 className='text-center'>Événements en vedette</h2>
 
-                    <CardContainer>
+                    <CardsContainer>
                         {featuredEvents.map((event, index) => 
                             <EventCard {...event} key={index} />
                         )}
-                    </CardContainer>
+                    </CardsContainer>
                 </section>
 
                 <PromoBanner

@@ -1,0 +1,28 @@
+.simple-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 12px;
+    padding: 30px 20px;
+    max-width: 400px;
+}
+
+.simple-card h3 {
+    color: var(--bs-primary);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.simple-card p {
+    font-size: 1.1rem;
+}
+
+.icon-container > * {
+    font-size: 2.5rem;
+    color: var(--bs-primary);
+    margin-bottom: 15px;
+}

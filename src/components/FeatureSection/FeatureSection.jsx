@@ -26,9 +26,9 @@ export default function FeatureSection(props) {
     }, []);
 
     return (
-        <section data-aos="fade-up" className="container feature-section row my-5">
+        <section data-aos="fade-up" className="container feature-section row my-5 mx-auto">
             <div className={`text-container col-12 col-md-6 ${props.img.right ? "left" : "right"}`}>
-                <h2>{props.title}</h2>
+                <h2 className=''>{props.title}</h2>
                 <p>{props.paragraph}</p>
 
                 {props.ctaLinks && 
