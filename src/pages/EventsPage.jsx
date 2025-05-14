@@ -253,7 +253,7 @@ export default function EventsPage() {
                     title="Avez-vous une idée d'événement ?"
                     paragraph="Si vous avez une idée d'événement que vous aimeriez nous proposer, n'hésitez pas à nous contacter. Nous sommes toujours ouverts à de nouvelles idées et nous sommes impatients de découvrir comment nous pouvons travailler ensemble pour organiser des événements qui font une différence positive dans notre communauté."
                     ctaButtons={[
-                        <Link to="contact/" className='btn btn-outline-primary'>Contactez-nous</Link>
+                        <Link key="contact" to="contact/" className='btn btn-outline-primary'>Contactez-nous</Link>
                     ]}
                 />
             </main>
@@ -263,23 +263,23 @@ export default function EventsPage() {
                 brand={<span className="brand-name">Lions <span className="text-white">Club</span></span>}
                 paragraph="Nous sommes une organisation de jeunes motivés à impacter notre communauté positivement."
                 socialMediaLinks={[
-                    <Link to="https://www.facebook.com" className="text-white link me-3"><FaFacebook className='fs-5'/></Link>,
-                    <Link to="https://www.instagram.com" className="text-white link me-3"><FaInstagram className='fs-5'/></Link>,
-                    <Link to="https://www.twitter.com" className="text-white link me-3"><FaTwitter className='fs-5'/></Link>,
-                    <Link to="https://www.linkedin.com" className="text-white link"><FaLinkedin className='fs-5'/></Link>,
+                    <Link key="facebook" to="https://www.facebook.com" className="text-white link me-3"><FaFacebook className='fs-5'/></Link>,
+                    <Link key="instagram" to="https://www.instagram.com" className="text-white link me-3"><FaInstagram className='fs-5'/></Link>,
+                    <Link key="twitter" to="https://www.twitter.com" className="text-white link me-3"><FaTwitter className='fs-5'/></Link>,
+                    <Link key="linkedin" to="https://www.linkedin.com" className="text-white link"><FaLinkedin className='fs-5'/></Link>,
                 ]}        
                 quickLinks={[
-                    <Link to="/" className="text-white text-decoration-none link">Accueil</Link>,
-                    <Link to="/about" className="text-white text-decoration-none link">À propos</Link>,
-                    <Link to="/events" className="text-white text-decoration-none link">Événements</Link>,
-                    <Link to="/contact" className="text-white text-decoration-none link">Contact</Link>
+                    <Link key="home" to="/" className="text-white text-decoration-none link">Accueil</Link>,
+                    <Link key="about" to="/about" className="text-white text-decoration-none link">À propos</Link>,
+                    <Link key="events" to="/events" className="text-white text-decoration-none link">Événements</Link>,
+                    <Link key="contact" to="/contact" className="text-white text-decoration-none link">Contact</Link>
                 ]}
                 address="Faculté des Sciences Ben M'Sik, Casablanca, Maroc"
                 mail="lionsclubfsbm@gmail.com"
                 phone="+212612345678"
                 importantLinks={[
-                    <Link to="/contact#form" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
-                    <Link to="/contact#form" className="text-white text-decoration-none link">Faire un don</Link>,
+                    <Link key="join" to="/contact#form" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
+                    <Link key="donate" to="/contact#form" className="text-white text-decoration-none link">Faire un don</Link>,
                 ]}   
             />        
         </>
