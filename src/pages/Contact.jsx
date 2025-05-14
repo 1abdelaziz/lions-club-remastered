@@ -1,6 +1,6 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, } from 'react-icons/fa';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from 'react';
 import AOS from 'aos';
 import logo from '../assets/images/logo.png';
@@ -13,6 +13,17 @@ import InfoBox from "../components/InfoBox/InfoBox.jsx";
 import ContactForm from "../components/ContactForm/ContactForm.jsx";
 
 export default function Contact() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.substring(1));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [location]);
+
     useEffect(() => {
         AOS.init({duration: 1000, once: false});
     })
@@ -69,7 +80,7 @@ export default function Contact() {
                 <Link to="/about" className="link navlink">A propos</Link>
                 <Link to="/events" className="link navlink">Evénements</Link>
                 <Link to="/contact" className="link navlink">Contact</Link>
-                <Link to="#" className="btn btn-warning fw-bold">Rejoindre</Link>
+                <Link to="/contact#form" className="btn btn-warning fw-bold">Rejoindre</Link>
             </Header>
             
             <SimpleHero
@@ -110,10 +121,10 @@ export default function Contact() {
                         </div>
                     </section>
 
-                    <section className='col' data-aos="fade-up">
+                    <section id='form' className='col' data-aos="fade-up">
                         <h2 className='my-5'>Contactez-nous</h2>
                         <ContactForm 
-                            onSubmit={(e) => {alert("done")}}
+                            onSubmit={() => {alert("done")}}
                         />
                     </section>
                 </section>
@@ -148,9 +159,8 @@ export default function Contact() {
                 mail="lionsclubfsbm@gmail.com"
                 phone="+212612345678"
                 importantLinks={[
-                    <Link to="/upcoming-events" className="text-white text-decoration-none link">Événements à venir</Link>,
-                    <Link to="/join-us" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
-                    <Link to="/donate" className="text-white text-decoration-none link">Faire un don</Link>,
+                    <Link to="/contact#form" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
+                    <Link to="/contact#form" className="text-white text-decoration-none link">Faire un don</Link>,
                 ]}   
             />
         </>

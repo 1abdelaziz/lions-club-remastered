@@ -52,7 +52,7 @@ export default function Header(props) {
         <header className={`fixed-top ${scrolled ? 'scrolled' : ''}`} data-aos="fade-down">
             <nav className="navbar navbar-expand-lg" data-aos="fade-down">
                 <div className="container">
-                    <a className="navbar-brand" href="#">
+                    <a className="navbar-brand" href="/">
                         {props.logo &&
                             <img src={props.logo.src} alt={props.logo.alt}  className="logo me-2" />
                         }

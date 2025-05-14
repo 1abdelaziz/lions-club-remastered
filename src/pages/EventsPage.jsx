@@ -1,5 +1,5 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 import logo from '../assets/images/logo.png';
@@ -12,6 +12,8 @@ import EventCard from '../components/EventCard/EventCard.jsx';
 import PromoBanner from '../components/PromoBanner/PromoBanner.jsx';
 
 export default function EventsPage() {
+    const navigate = useNavigate();
+
     const events = [
         {
           img: {
@@ -194,7 +196,7 @@ export default function EventsPage() {
                 <Link to="/about" className="link navlink">A propos</Link>
                 <Link to="/events" className="link navlink">Evénements</Link>
                 <Link to="/contact" className="link navlink">Contact</Link>
-                <Link to="#" className="btn btn-warning fw-bold">Rejoindre</Link>
+                <Link to="/contact#form" className="btn btn-warning fw-bold">Rejoindre</Link>
             </Header>
 
             <SimpleHero
@@ -229,7 +231,7 @@ export default function EventsPage() {
                     {filteredEvents.length > 0 ? (
                         <CardsContainer>
                             {filteredEvents.map((event, index) => (
-                                <EventCard {...event} key={index} />
+                                <EventCard {...event} />
                             ))}
                         </CardsContainer>
                     ) : (
@@ -276,9 +278,8 @@ export default function EventsPage() {
                 mail="lionsclubfsbm@gmail.com"
                 phone="+212612345678"
                 importantLinks={[
-                    <Link to="/upcoming-events" className="text-white text-decoration-none link">Événements à venir</Link>,
-                    <Link to="/join-us" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
-                    <Link to="/donate" className="text-white text-decoration-none link">Faire un don</Link>,
+                    <Link to="/contact#form" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
+                    <Link to="/contact#form" className="text-white text-decoration-none link">Faire un don</Link>,
                 ]}   
             />        
         </>

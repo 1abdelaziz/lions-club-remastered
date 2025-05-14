@@ -1,7 +1,7 @@
 import { FaArrowRight, FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.png";
-import heroBackground from "../assets/images/logo.png";
+import heroBackground from "../assets/images/main-hero.jpeg";
 
 import Header from "../components/Header/Header.jsx";
 import MainHero from "../components/MainHero/MainHero.jsx";
@@ -67,7 +67,7 @@ export default function Home() {
                 <Link to="/about" className="link navlink">A propos</Link>
                 <Link to="/events" className="link navlink">Evénements</Link>
                 <Link to="/contact" className="link navlink">Contact</Link>
-                <Link to="#" className="btn btn-warning fw-bold">Rejoindre</Link>
+                <Link to="/contact#form" className="btn btn-warning fw-bold">Rejoindre</Link>
             </Header>
             
             <MainHero 
@@ -186,9 +186,8 @@ export default function Home() {
                 mail="lionsclubfsbm@gmail.com"
                 phone="+212612345678"
                 importantLinks={[
-                    <Link to="/upcoming-events" className="text-white text-decoration-none link">Événements à venir</Link>,
-                    <Link to="/join-us" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
-                    <Link to="/donate" className="text-white text-decoration-none link">Faire un don</Link>,
+                    <Link to="/contact#form" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
+                    <Link to="/contact#form" className="text-white text-decoration-none link">Faire un don</Link>,
                 ]}   
             />
         </>

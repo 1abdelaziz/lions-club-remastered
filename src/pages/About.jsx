@@ -208,7 +208,7 @@ export default function About() {
             <Link to="/about" className="link navlink">A propos</Link>
             <Link to="/events" className="link navlink">Evénements</Link>
             <Link to="/contact" className="link navlink">Contact</Link>
-            <Link to="#" className="btn btn-warning fw-bold">Rejoindre</Link>
+            <Link to="/contact#form" className="btn btn-warning fw-bold">Rejoindre</Link>
         </Header>
 
         <SimpleHero
@@ -311,9 +311,8 @@ export default function About() {
             mail="lionsclubfsbm@gmail.com"
             phone="+212612345678"
             importantLinks={[
-                <Link to="/upcoming-events" className="text-white text-decoration-none link">Événements à venir</Link>,
-                <Link to="/join-us" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
-                <Link to="/donate" className="text-white text-decoration-none link">Faire un don</Link>,
+              <Link to="/contact#form" className="text-white text-decoration-none link">Rejoignez-nous</Link>,
+              <Link to="/contact#form" className="text-white text-decoration-none link">Faire un don</Link>,
             ]}   
         />
     </>
