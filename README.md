@@ -1,6 +1,6 @@
-# Lions Club of Remastered
+# Lions Club Remastered
 
-  A modern, accessible, and responsive website for the **Lions Club of Remastered**, built using **React**. The site showcases club information, events, contact details, and more—designed with a clean and elegant UI.
+  A modern, accessible, and responsive website for the **Lions Club Remastered**, built using **React**. The site showcases the club information, events, contact details, and more—designed with a clean and elegant UI.
 
 ## 📁 Project Structure
 
