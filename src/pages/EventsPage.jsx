@@ -253,7 +253,7 @@ export default function EventsPage() {
                     title="Avez-vous une idée d'événement ?"
                     paragraph="Si vous avez une idée d'événement que vous aimeriez nous proposer, n'hésitez pas à nous contacter. Nous sommes toujours ouverts à de nouvelles idées et nous sommes impatients de découvrir comment nous pouvons travailler ensemble pour organiser des événements qui font une différence positive dans notre communauté."
                     ctaButtons={[
-                        <Link key="contact" to="contact/" className='btn btn-outline-primary'>Contactez-nous</Link>
+                        <Link key="contact" to="contact/" className='btn btn-outline-primary'>Contactez-nous</Link>,
                     ]}
                 />
             </main>
