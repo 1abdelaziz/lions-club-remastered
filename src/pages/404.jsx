@@ -5,12 +5,17 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer/Footer.jsx';
 import logo from '../assets/images/logo.png';
 import AOS from 'aos';
+import { useEffect } from 'react';
 
 
 export default function NotFound() {
+    useEffect(() => {
+        AOS.init({duration: 1000, once: false})
+    })
+
     return (    
         <>
-            <main className="min-vh-100 d-flex flex-column justify-content-center align-items-center">
+            <main className="min-vh-100 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
                 <div className="text-center">
                     <div className="display-1 text-warning mb-4">404</div>
                     <h1 className="display-3 fw-bold mb-2">Page introuvable</h1>
@@ -26,6 +31,7 @@ export default function NotFound() {
                     </Link>
                 </div>
             </main>
+            
             <Footer
                 logo={{src: logo, alt: "Lions Club logo"}}
                 brand={<span className="brand-name">Lions <span className="text-white">Club</span></span>}
