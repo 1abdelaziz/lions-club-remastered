@@ -1,0 +1,5 @@
+iframe {
+    border-radius: 5px;
+    outline: solid hsl(0, 0%, 80%) 3px;
+    padding: 0 !important;
+}

@@ -19,7 +19,7 @@ export default function PromoBanner(props) {
     }, [])
 
     return (
-        <section className={`promobanner container my-5 py-5 ${props.className && props.className}`} data-aos="fade-up">
+        <section className={`promobanner container my-5 py-5 px-4 ${props.className && props.className}`} data-aos="fade-up">
             <h2>{props.title}</h2>
             <p>{props.paragraph}</p>
 

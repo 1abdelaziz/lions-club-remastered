@@ -20,7 +20,7 @@ export default function SimpleHero(props) {
 
     return (
         <section className="hero-section bg-dark text-center text-white pb-5" data-aos="fade-down">
-            <h1>{props.title}</h1>
+            <h1 className='my-4'>{props.title}</h1>
             <p className="px-2 lead">{props.paragraph}</p>
 
             {props.ctaButtons &&

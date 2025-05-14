@@ -1,0 +1,49 @@
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-items {
+    display: grid;
+    gap: 1rem;
+}
+
+.faq-item {
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.2s ease;
+}
+
+.faq-item[open] {
+    border-color: var(--bs-primary);
+    box-shadow: 0 2px 4px rgba(0, 112, 243, 0.1);
+}
+
+.faq-question {
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    list-style: none; /* removes default arrow in some browsers */
+    padding: 0.5rem 0;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none; /* removes default arrow in WebKit browsers */
+}
+
+.faq-question:after {
+    content: "+";
+    float: right;
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-question:after {
+    content: "−";
+}
+
+.faq-answer {
+    padding: 1rem 0 0.5rem;
+    color: #666;
+    line-height: 1.5;
+}

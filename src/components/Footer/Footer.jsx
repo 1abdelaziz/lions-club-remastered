@@ -27,7 +27,7 @@ export default function Footer(props) {
     }, []);
 
     return (
-        <footer className="text-white pt-5 pb-3" data-aos="fade-up">
+        <footer className="text-white pt-5 pb-3 mt-5" data-aos="fade-up">
             <div className="container">
                 <div className="row g-5">
                     {/* Lions Club Section */}
@@ -52,7 +52,7 @@ export default function Footer(props) {
                         <h3 className='text-warning mb-4 h5'>Liens Rapides</h3>
                         <ul className='list-unstyled'>
                             {props.quickLinks.map((link, index) => 
-                                <li key={index}>{link}</li>
+                                <li key={index} className='py-1'>{link}</li>
                             )}
                         </ul>
                     </section>
@@ -83,7 +83,7 @@ export default function Footer(props) {
                         <h3 className='text-warning mb-4 h5'>Important</h3>
                         <ul className='list-unstyled'>
                             {props.importantLinks.map((link, index) =>
-                                <li key={index}>{link}</li>
+                                <li key={index} className='py-1'>{link}</li>
                             )}
                         </ul>
                     </section>

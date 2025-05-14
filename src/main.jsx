@@ -11,6 +11,7 @@ import './assets/styles/links.css';
 import './assets/styles/img.css';
 import './assets/styles/cards.css';
 import './assets/styles/buttons.css';
+import './assets/styles/iframes.css';
 
 
 createRoot(document.getElementById('root')).render(

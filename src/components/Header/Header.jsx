@@ -65,7 +65,7 @@ export default function Header(props) {
                     </a>
 
                     <button 
-                        className="navbar-toggler text-dark" 
+                        className={`navbar-toggler ${scrolled ? "navbar-light" : "navbar-dark"}`}
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target={`#${props.id}`}

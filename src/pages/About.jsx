@@ -1,6 +1,6 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaArrowRight } from 'react-icons/fa';
 import { FaHeart, FaHandshake, FaBalanceScale, } from 'react-icons/fa';
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 import logo from "../assets/images/logo.png";
 import { useEffect } from 'react';
@@ -19,7 +19,7 @@ import { TimelineItem } from "../components/Timeline/Timeline.jsx";
 export default function About() {
     useEffect(() => {
         AOS.init({duration: 1000, once: false});
-    })
+    }, [])
 
     const coreValues = [
         {
@@ -215,8 +215,22 @@ export default function About() {
             title="À propos de notre club"
             paragraph="Depuis sa fondation, le Lions Club de Remastered incarne les valeurs de solidarité, d'engagement et de service. Découvrez notre histoire, notre mission et les personnes qui donnent vie à nos actions."
             ctaButtons={[
-                <Link to="/notre-histoire" className="btn btn-warning" key="1">Notre histoire</Link>,
-                <Link to="/membres" className="btn btn-outline-light ms-2" key="2">Rencontrer notre équipe</Link>
+                <button
+                    className="btn btn-warning"
+                    type="button"
+                    onClick={() => document.querySelector(".our-history > h2").scrollIntoView({behavior: "smooth"})}
+                    key="1"
+                >
+                    Notre histoire
+                </button>,
+                <button
+                    className="btn btn-outline-light ms-2"
+                    type="button"
+                    onClick={() => document.querySelector(".members > h2").scrollIntoView({behavior: "smooth"})}
+                    key="2"
+                >
+                    Rencontrer notre équipe
+                </button>
             ]}
         />
 
@@ -252,22 +266,23 @@ export default function About() {
                     right: true,
                 }}
                 ctaLinks={[
-                    <Link to="/impact" className="link" key="2">Voir nos résultats <FaArrowRight /></Link>,
+                    <Link to="/impact" className="link" key="2" id='scroll-to-members'>Voir nos résultats <FaArrowRight /></Link>,
                 ]}
             />
 
-            <section className="members" data-aos="fade-up">
+            <section className="members my-5" data-aos="fade-up">
                 <h2 className='text-center'>Notre Équipe</h2>
                 
                 <CardsContainer>
-                    {members.map(member => 
-                        <MemberCard {...member} />
+                    {members.map((member, index) => 
+                        <MemberCard {...member} key={index} />
                     )}
                 </CardsContainer>
+                <span id='scroll-to-our-history'></span>
             </section>
 
-            <section className="our-history" data-aos="fade-up">
-                <h2 className='text-center'>Notre Histoire</h2>
+            <section className="our-history my-5" data-aos="fade-up">
+                <h2 className='text-center my-5'>Notre Histoire</h2>
                 <Timeline>
                     {milestones.map((milestone, index) =>
                         <TimelineItem {...milestone} key={index} />

@@ -1,0 +1,14 @@
+.infobox-container {
+    max-width: 500px;
+    min-width: 500px;
+}
+
+.infobox-container .icon-container {
+    padding: 10px;
+    font-size: 1.75rem;
+    flex-shrink: 0;
+}
+
+.infobox-container .icon-container svg {
+    color: var(--bs-primary) !important;
+}

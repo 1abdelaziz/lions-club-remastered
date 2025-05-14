@@ -1,5 +1,5 @@
 import { FaArrowRight, FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import heroBackground from "../assets/images/logo.png";
 
@@ -12,6 +12,8 @@ import EventCard from "../components/EventCard/EventCard.jsx";
 import PromoBanner from "../components/PromoBanner/PromoBanner.jsx";
 
 export default function Home() {
+    const navigate = useNavigate();
+
     const featuredEvents = [
         {
             img: {
@@ -67,16 +69,27 @@ export default function Home() {
                 <Link to="/contact" className="link navlink">Contact</Link>
                 <Link to="#" className="btn btn-warning fw-bold">Rejoindre</Link>
             </Header>
+            
             <MainHero 
                 background={{src: heroBackground, alt: "Hero background"}}
                 title="Bienvenue au Club de la Faculté"
                 paragraph="Rejoignez une communauté académique dynamique et restez informé des événements, actualités et opportunités."
-                ctaButtons={
-                    <>
-                    <a href="/rejoindre" className="btn btn-warning fw-bold">Rejoindre</a>
-                    <a href="/a-propos" className="btn btn-outline-light fw-bold">En savoir plus</a>
-                    </>
-                }
+                ctaButtons={[
+                    <button 
+                        type='button'
+                        onClick={() => navigate("/contact#form") }
+                        className="btn btn-warning fw-bold"
+                    >
+                        Rejoindre
+                    </button>,
+                    <button
+                        type='button'
+                        onClick={() => {document.querySelector('main').scrollIntoView({behavior: 'smooth'})}}
+                        className="btn btn-outline-light fw-bold"
+                    >
+                        En savoir plus
+                    </button>,
+                ]}
             />
 
             <main className="container">
@@ -135,8 +148,20 @@ export default function Home() {
                     title="Rejoignez le Lions Club"
                     paragraph="Faites partie d'une communauté engagée, développez vos compétences en leadership, et contribuez à des projets qui font la différence dans notre société."
                     ctaButtons={[
-                        <Link to="/inscription" className="btn btn-warning me-2" key="join">S'inscrire</Link>,
-                        <Link to="/a-propos" className="btn btn-outline-primary" key="learn">En savoir plus</Link>
+                        <button
+                            type='button'
+                            onClick={() => navigate("/contact#form")}
+                            className="btn btn-warning"
+                        >
+                            S'inscrire
+                        </button>,
+                        <Link 
+                            to="/about" 
+                            className="btn btn-outline-primary" 
+                            key="learn"
+                        >
+                            En savoir plus
+                        </Link>
                     ]}
                 />
             </main>
